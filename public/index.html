@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce PWA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">E-Commerce</a></div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="paginas/productos.html">Productos</a></li>
+                <li><a href="paginas/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="promo-banner">
+        <div class="promo-content">
+            <h1>¡Gran Venta!</h1>
+            <p>Descuentos increíbles en todos los productos.</p>
+            <a href="paginas/productos.html" class="btn-primary">Ver ofertas</a>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="product">
+                                <img src="img/producto1.jpg" alt="Producto 1" class="product-image">
+                                <h2>Nintendo Switch</h2>
+                                <p>La consola Nintendo Switch está diseñada para cualquier estilo de vida, transformándose rápidamente de una consola casera a una consola portátil.</p>
+                                <button class="btn-secondary add-to-cart-btn" tabindex="0" onclick="showAlert()">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="product">
+                                <img src="img/producto7.jpg" alt="Producto 7" class="product-image">
+                                <h2>Camara Seguridad</h2>
+                                <p>Monitorea y ten un registro de las actividades de las personas en una vivienda o negocio.</p>
+                                <button class="btn-secondary add-to-cart-btn" tabindex="0" onclick="showAlert()">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="product">
+                                <img src="img/producto10.jpg" alt="Producto 10" class="product-image">
+                                <h2>Playstation 5</h2>
+                                <p>Es la quinta consola de videojuegos de sobremesa desarrollada por la empresa Sony Interactive Entertainment.</p>
+                                <button class="btn-secondary add-to-cart-btn" tabindex="0" onclick="showAlert()">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2>Categorías</h2>
+        <ul class="category-list">
+            <li><a href="#">Electrónica</a></li>
+            <li><a href="#">Ropa</a></li>
+            <li><a href="#">Hogar</a></li>
+            <!-- Agrega más categorías aquí -->
+        </ul>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2023 E-Commerce. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showAlert() {
+        alert("¡Producto agregado al carrito!");
+    }
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registrado con éxito:', registration);
+                    })
+                    .catch(error => {
+                        console.log('Error al registrar el Service Worker:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

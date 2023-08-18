@@ -1,0 +1,16 @@
+{
+  "name": "aplicacionprogresiva",
+  "version": "1.0.0",
+  "description": "Mi PWA de E-Commerce",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0"
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000"> <!-- Color de tema para PWA -->
+    <title>Acerca de Nosotros - E-Commerce</title>
+    <link rel="manifest" href="manifest.json"> <!-- Archivo de manifiesto para PWA -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html">E-Commerce</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Acerca de Nosotros</h2>
+                    <p class="mb-4">Bienvenidos a E-Commerce, tu destino en línea para las últimas tendencias en compras en línea. Nuestro objetivo es brindarte una experiencia de compra excepcional con una amplia variedad de productos de alta calidad.</p>
+                    <p class="mb-4">Desde nuestra fundación en 2023, hemos estado comprometidos en ofrecer productos de primera clase y un servicio al cliente excepcional. Ya sea que estés buscando moda, electrónica, hogar o más, ¡lo tenemos todo aquí en E-Commerce!</p>
+                    <p class="mb-4">Explora nuestra selección y descubre lo que hace que E-Commerce sea tu elección número uno para compras en línea.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../img/empresa.jpg" alt="Oficina de E-Commerce" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-vision bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Nuestra Misión</h2>
+                    <p class="mb-4">Nuestra misión es proporcionar a nuestros clientes productos de alta calidad, una experiencia de compra segura y conveniente, y un servicio excepcional en línea.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Nuestra Visión</h2>
+                    <p class="mb-4">Nuestra visión es convertirnos en líderes globales en comercio electrónico al ofrecer una amplia gama de productos y servicios innovadores que mejoren la vida de las personas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team py-5">
+        <div class="container">
+            <h2 class="mb-2">Nuestro Equipo</h2>
+            <div class="row">
+                <div class="col-md-2 mb-4">
+                    <div class="card">
+                        <img src="../img/miembro1.jpg" alt="Miembro del Equipo 1" width="100px" height=""class="card-img-top team-member-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Patricio Bazantes</h3>
+                            <p class="card-text">Estudiante de Tecnologias de la Informacion</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <div class="card">
+                        <img src="../img/miembro2.jpg" alt="Miembro del Equipo 2" class="card-img-top team-member-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Richard Caraguay</h3>
+                            <p class="card-text">Estudiante de Tecnologias de la Informacion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values py-5">
+        <div class="container">
+            <h2 class="mb-4">Nuestros Valores</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="value">
+                        <img src="../img/value-icon1.jpg" alt="Valor 1" width="200px" class="value-icon">
+                        <h3 class="value-title">Calidad</h3>
+                        <p class="value-description">Nos esforzamos por ofrecer productos de la más alta calidad a nuestros clientes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="value">
+                        <img src="../img/value-icon2.jpg" alt="Valor 2" width="200px" class="value-icon">
+                        <h3 class="value-title">Innovación</h3>
+                        <p class="value-description">Buscamos constantemente nuevas formas de mejorar y ofrecer experiencias innovadoras.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="value">
+                        <img src="../img/value-icon3.jpg" alt="Valor 3" width="200px" class="value-icon">
+                        <h3 class="value-title">Compromiso</h3>
+                        <p class="value-description">Estamos comprometidos en brindar un excelente servicio al cliente en todo momento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2023 E-Commerce. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js').then(registration => {
+                    console.log('Service Worker registrado con éxito:', registration);
+                }).catch(error => {
+                    console.log('Error al registrar el Service Worker:', error);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
